@@ -46,44 +46,44 @@ const Game = () => {
             alt="Ilustración de la escena" 
             className="scene-image" 
         />
-      </div>
 
-      <div className="interaction-area">
-        <div className="text-bubble main-bubble">
-          <p>{currentScene.text}</p>
-          
-          {currentScene.type === 'continue' && (
-            <button 
-                className="action-btn continue-btn" 
-                onClick={() => handleChoice(currentScene.nextSceneId!)}
-            >
-              Continuar
-            </button>
-          )}
+        <div className="interaction-area">
+          <div className="text-bubble main-bubble">
+            <p>{currentScene.text}</p>
+            
+            {currentScene.type === 'continue' && (
+              <button 
+                  className="action-btn continue-btn" 
+                  onClick={() => handleChoice(currentScene.nextSceneId!)}
+              >
+                Continuar
+              </button>
+            )}
 
-          {currentScene.type === 'end' && (
-            <button 
-                className="action-btn reset-btn" 
-                onClick={handleReset}
-            >
-              Volver a empezar
-            </button>
+            {currentScene.type === 'end' && (
+              <button 
+                  className="action-btn reset-btn" 
+                  onClick={handleReset}
+              >
+                Volver a empezar
+              </button>
+            )}
+          </div>
+
+          {currentScene.type === 'choice' && (
+            <div className="choices-bubble">
+              {currentScene.choices?.map((choice, index) => (
+                <button
+                  key={index}
+                  className="choice-option"
+                  onClick={() => handleChoice(choice.nextSceneId)}
+                >
+                  {choice.text}
+                </button>
+              ))}
+            </div>
           )}
         </div>
-
-        {currentScene.type === 'choice' && (
-          <div className="choices-bubble">
-            {currentScene.choices?.map((choice, index) => (
-              <button
-                key={index}
-                className="choice-option"
-                onClick={() => handleChoice(choice.nextSceneId)}
-              >
-                {choice.text}
-              </button>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );
