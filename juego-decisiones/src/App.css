@@ -3,7 +3,8 @@
   padding: 0;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Fallback */
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -12,7 +13,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100vh; /* Fallback */
+  height: 100dvh;
   width: 100vw;
   background-color: #1a1a1a; /* Dark background for better contrast */
 }
