@@ -1,0 +1,64 @@
+[
+  {
+    "id": "start",
+    "text": "Te despiertas en un bosque oscuro. No recuerdas cómo llegaste aquí. El camino se bifurca frente a ti, iluminado por una tenue luz de luna.",
+    "image": "https://placehold.co/600x400/2c3e50/ffffff?text=Bosque+Oscuro",
+    "type": "choice",
+    "choices": [
+      { "text": "Ir por el sendero de la izquierda", "nextSceneId": "left-path" },
+      { "text": "Ir por el sendero de la derecha", "nextSceneId": "right-path" }
+    ]
+  },
+  {
+    "id": "left-path",
+    "text": "El camino de la izquierda desciende suavemente hacia un valle. Escuchas el sonido de agua corriendo cerca.",
+    "image": "https://placehold.co/600x400/27ae60/ffffff?text=Valle+Verde",
+    "type": "continue",
+    "nextSceneId": "river-drink"
+  },
+  {
+    "id": "river-drink",
+    "text": "Llegas a la orilla de un río cristalino. El agua se ve fresca y tentadora. Al otro lado, divisas una pequeña cabaña con humo saliendo de la chimenea.",
+    "image": "https://placehold.co/600x400/3498db/ffffff?text=Rio+y+Cabaña",
+    "type": "choice",
+    "choices": [
+      { "text": "Cruzar el río hacia la cabaña", "nextSceneId": "cabin" },
+      { "text": "Seguir la orilla del río", "nextSceneId": "river-end" }
+    ]
+  },
+  {
+    "id": "right-path",
+    "text": "El camino de la derecha se vuelve cada vez más estrecho y espinoso. La vegetación parece cerrarse a tu alrededor.",
+    "image": "https://placehold.co/600x400/8e44ad/ffffff?text=Camino+Espinoso",
+    "type": "continue",
+    "nextSceneId": "thorns-encounter"
+  },
+  {
+    "id": "thorns-encounter",
+    "text": "De entre las sombras surge una figura encapuchada. Te bloquea el paso y extiende una mano huesuda.",
+    "image": "https://placehold.co/600x400/c0392b/ffffff?text=Figura+Misteriosa",
+    "type": "choice",
+    "choices": [
+      { "text": "Hablar con la figura", "nextSceneId": "talk-figure" },
+      { "text": "Huir hacia atrás", "nextSceneId": "start" }
+    ]
+  },
+  {
+    "id": "talk-figure",
+    "text": "La figura resulta ser un anciano perdido. Te agradece la compañía y te señala un camino seguro fuera del bosque.",
+    "image": "https://placehold.co/600x400/f1c40f/000000?text=Final+Bueno",
+    "type": "end"
+  },
+  {
+    "id": "river-end",
+    "text": "Sigues el río durante horas hasta que desemboca en un vasto océano. Un barco mercante pasa cerca y te rescata. ¡Has escapado!",
+    "image": "https://placehold.co/600x400/2980b9/ffffff?text=Final+del+Mar",
+    "type": "end"
+  },
+  {
+    "id": "cabin",
+    "text": "Entras en la cabaña. Está vacía, pero hay una sopa caliente en la mesa. Decides quedarte a descansar. Has encontrado un nuevo hogar.",
+    "image": "https://placehold.co/600x400/d35400/ffffff?text=Final+Hogareño",
+    "type": "end"
+  }
+]
